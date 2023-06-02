@@ -1,4 +1,5 @@
 @import url(../css/_normalize.css);
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 @import url(../css/_vars.css);
 
 
@@ -9,12 +10,9 @@
 }
 html,
 body {
-    margin-top: 20px;
     min-height: 100vh;
-    font-family: var(--main-font-family);
-    color: var(--main-text-color);
-    font-size: var(--main-font-size);
-    
+    font-family: 'Lato', sans-serif;    color: var(--main-text-color);
+    font-size: var(--main-font-size); 
 }
 
 .container {
@@ -26,15 +24,17 @@ body {
 .logo {
     width: 170px;
     height: 60px;
+    /* justify-content: left; */
     cursor: pointer;
 }
 
-.header {
+.flex-header {
     display: flex;
     justify-content: space-between;
     text-align: center;
     align-items: center;
     flex-wrap: wrap;
+    padding: 10px 0;
 }
 
 .nav__list {
@@ -42,11 +42,13 @@ body {
     text-align: center;
     justify-content: space-between;
     gap: 30px;
+    padding-left: 0;
 }
 
 .nav__list_item {
+    font-family: 'Lato', sans-serif;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 20px;
     line-height: 1.2;
 }
@@ -63,7 +65,7 @@ body {
     text-transform: uppercase;
     padding: 10px 20px;
     background: none;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 18px;
     border: 1px solid #3C3C3C;
 }
@@ -76,9 +78,11 @@ body {
 
 /* main */
 .main {
-    margin: 150px auto;
+    background: #F6F6F6;
+    padding: 150px 0;
 }
-.main__title {
+.team__title {
+    font-family: 'Lato', sans-serif;
     text-transform: uppercase;
     text-align: center;
     padding-bottom: 20px;
@@ -88,24 +92,25 @@ body {
 
     position: relative;
 }
-.main__title::after {
+.team__title::after {
     content: "";
     position: absolute;
     height: 4px;
-    width: 40px;
+    width: 45px;
     bottom: 0px;
-    left: 48%;
+    left: 50%;
+    transform: translateX(-50%);
     background: #DDDBDB;
 }
 
-.main__title_description {
+.team__sub-title {
     text-align: center;
     margin-top: 40px;
     font-size: 16px;
     line-height: 1.5;
 }
 
-.main__team_list {
+.team__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -113,35 +118,33 @@ body {
     padding: 0;
 }
 
-li>img {
-    width: 270px;
-    height: 270px;
-}
-
-h4 {
+.list__title {
     margin-top: 19px;
     margin-bottom: 0;
 }
 
-p {
+.person__photo {
+    width: 270px;
+    height: 270px;
+}
+
+.list__sub-title {
     margin: 0;
     color: #646464;
 }
 
 
 /* footer */
-.footer {
-    display: table;
+.flex-footer {
+    display: flex;
     align-items: center;
     justify-items: center;
-}
-
-.footer_logo {
-    text-align: center;
-    cursor: pointer;
+    flex-direction: column;
+    padding: 40px 0;
 }
 
 .list__item_smaller > a {
+    font-family: 'Lato', sans-serif;
     font-size: 18px;
     margin: 20px auto 28px;
 }
@@ -150,21 +153,22 @@ p {
     display: flex;
     justify-content: center;
     gap: 10px;
+    padding: 0;
 }
 
-.social__list_link {
+.social-list__link {
     color: #18B5DC;
     background-color: #FFFFFF;
 }
 
-.social__list_link>svg {
+.social-list__link>svg {
     width: 42px;
     height: 42px;
     border: 1px solid #18B5DC;
 
 }
 
-.social__list_link>svg:hover {
+.social-list__link>svg:hover {
     color: #FFFFFF;
     background-color: #18B5DC;
 
